@@ -1,0 +1,19 @@
+<h1> To Do List </h1>
+<h3> To Do: </h3>
+<ol>
+<% chickens.forEach(function(item) { %>
+	<li> <%= item.description %> </li>
+<% }); %>
+</ol>
+<hr>
+<form action="/add" method="post">
+	<label for="description">Description</label>
+	<input type="text" name="ItemDescription" value="" id="description" />
+	<p><input type="submit" value="Add To Do"/></p>
+</form>
+
+<form action="/remove" method="post">
+	<label for="Remove">Item Number</label>
+	<input type="text" name="ItemNumber" value="" id="description" />
+	<p><input type="submit" value="Remove To Do"/></p>
+</form>
